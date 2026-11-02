@@ -1,0 +1,5 @@
+*.csv
+!results/*.csv
+sales_analysis_output/
+.venv/
+__pycache__/
