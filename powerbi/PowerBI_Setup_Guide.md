@@ -1,10 +1,9 @@
 # Power BI Setup Guide: Supermart Sales Report
 
-How to rebuild the Power BI report on a clean data model, using the files in this folder.
+How to build the Power BI report on a clean data model, using the files in this folder.
 
 ## Files
 
-- `supermart_sales.pbix`: the current Power BI report.
 - `DAX_Calendar.txt`: calendar table and relationship instructions.
 - `DAX_Measures.txt`: 11 DAX measures (sales, profit, margin, orders, AOV, discount, customers, YoY).
 - `Supermart_Theme.json`: report colours and typography.
@@ -21,8 +20,8 @@ This writes `sales_analysis_output/SupermartGrocerySales_PowerBI_Clean.csv`. It 
 
 ## 2. Build the model in Power BI Desktop
 
-1. Open `supermart_sales.pbix` and save a working copy.
-2. In **Home > Transform data**, point the `SupermartGrocerySales` query's Source step at the clean CSV. Don't load it as a second table, or you'll end up with duplicate fact tables.
+1. Create a new report in Power BI Desktop.
+2. Load the clean CSV with **Get data > Text/CSV** and name the table `SupermartGrocerySales`, since the DAX files use that name.
 3. Set data types: `Order Date` as Date, `Sales` and `Profit` as decimal numbers, and `Discount` as a decimal formatted as a percentage.
 4. Create the calendar table from `DAX_Calendar.txt` (**Modeling > New table**). Add the relationship, mark it as a date table and set the sort-by columns as described in that file.
 5. Add each measure from `DAX_Measures.txt` one at a time (**Modeling > New measure**). Format margin, discount and YoY measures as percentages. Use the average discount as a KPI, never the sum.
