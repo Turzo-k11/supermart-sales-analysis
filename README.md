@@ -47,7 +47,7 @@ An exploratory analysis of 9,994 grocery sales transactions (2015–2018). It lo
 
 ## Data source
 
-[Supermart Grocery Sales – Retail Analytics Dataset](https://www.kaggle.com/datasets/mohamedharris/supermart-grocery-sales-retail-analytics-dataset) by Mohamed Harris on Kaggle. See the dataset page for licensing.
+[Supermart Grocery Sales – Retail Analytics Dataset](https://www.kaggle.com/datasets/mohamedharris/supermart-grocery-sales-retail-analytics-dataset) by Mohamed Harris on Kaggle. The data files are © the original authors and are not redistributed here.
 
 The raw CSV is not redistributed here. Download it and save it in the repository root as `Supermart Grocery Sales - Retail Analytics Dataset.csv`, or pass a different path with `--input`.
 
@@ -67,7 +67,7 @@ Add `--export-clean` to also write a Power BI-ready CSV with consistent ISO date
 
 ## Power BI report
 
-`powerbi/supermart_sales.pbix` contains the report. `powerbi/PowerBI_Setup_Guide.md` explains how to rebuild it on a clean model, using a calendar table (`DAX_Calendar.txt`), DAX measures (`DAX_Measures.txt`) and a custom theme (`Supermart_Theme.json`). Check any rebuilt report against the totals above.
+The `.pbix` file is not included, because it embeds the full dataset, which is not openly licensed. `powerbi/PowerBI_Setup_Guide.md` explains how to build the report from the source CSV, using a calendar table (`DAX_Calendar.txt`), DAX measures (`DAX_Measures.txt`) and a custom theme (`Supermart_Theme.json`). Check any rebuilt report against the totals above.
 
 ## Repository structure
 
@@ -80,7 +80,6 @@ supermart-sales-analysis/
 ├── results/          # Summary CSVs from a verified run
 ├── assets/           # Charts used in this README
 └── powerbi/
-    ├── supermart_sales.pbix
     ├── PowerBI_Setup_Guide.md
     ├── DAX_Measures.txt
     ├── DAX_Calendar.txt
